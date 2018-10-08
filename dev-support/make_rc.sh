@@ -42,7 +42,7 @@ mvnGet() {
     org.codehaus.mojo:exec-maven-plugin:1.6.0:exec 2>/dev/null
 }
 
-mvnFun() {
+mvnRun() {
   set -x
   MAVEN_OPTS="${mvnopts}" ${mvn} -Dmaven.repo.local=${repodir} $@
   set +x
@@ -50,7 +50,7 @@ mvnFun() {
 
 # Check project name
 projectname=$(mvnGet project.name)
-if [ "${projectname}" = "Apache Ratis Thirdparty" ]; then
+if [ "${projectname}" = "Apache Ratis Thirdparty Parent" ]; then
   echo
   echo "Prepare release artifacts for $projectname"
   echo
@@ -90,7 +90,7 @@ git archive --format=tar.gz --output="${archivedir}/${artifactid}-${version}-src
 
 # Build and install Ratis-Thirdparty for the eventual mvn-deploy
 # No "bin tarball"
-mvnFun install -DskipTests -Papache-release
+mvnRun install -DskipTests -Papache-release
 
 echo
 echo "Generated artifacts successfully."
