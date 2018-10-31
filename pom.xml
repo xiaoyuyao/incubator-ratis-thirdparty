@@ -22,7 +22,7 @@
   </parent>
   <artifactId>ratis-thirdparty</artifactId>
   <groupId>org.apache.ratis</groupId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <name>Apache Ratis Thirdparty</name>
   <packaging>pom</packaging>
   <description>Thirdparty dependencies for Apache Ratis</description>
@@ -42,7 +42,7 @@
     <connection>scm:git:git://github.com/apache/incubator-ratis-thirdparty.git</connection>
     <developerConnection>scm:git:https://github.com/apache/incubator-ratis-thirdparty.git</developerConnection>
     <url>https://github.com/apache/incubator-ratis-thirdparty</url>
-    <tag>HEAD</tag>
+    <tag>ratis-thirdparty-0.1.0</tag>
   </scm>
   <issueManagement>
     <system>JIRA</system>
